@@ -7,9 +7,6 @@ from transformers import pipeline
 model_name = "ProsusAI/finbert"  # https://huggingface.co/ProsusAI/finbert Medium Post: https://medium.com/prosus-ai-tech-blog/finbert-financial-sentiment-analysis-with-bert-b277a3607101
 sentiment_pipeline = pipeline("sentiment-analysis", model=model_name)
 
-API_KEY = "AIzaSyDp1aUFUfuxIvgzRzPSNRFMREBteRnbRsc"
-SEARCH_ENGINE_ID = "83b2f052aac2646e3"
-
 
 def google_search(query, api_key, search_engine_id):
     url = f"https://www.googleapis.com/customsearch/v1?q={query}&key={api_key}&cx={search_engine_id}"
